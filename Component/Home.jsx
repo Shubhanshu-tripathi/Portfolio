@@ -10,8 +10,8 @@ function Home() {
             <span className="text-pink-500">I'm Shubhanshu,</span> MERN <br /> developer based in India.
           </h1>
           <p className="mt-6 text-sm md:text-lg text-gray-300">
-            I am a frontend developer from Bhopal, India with 1 year of experience <br className="hidden md:block" />
-            in companies like TCS and Paytm.
+            I am a MERN developer from Bhopal, India with 1 year of experience <br className="hidden md:block" />
+            in freelancing , building scalable and responsive web applications
           </p>
   
           {/* Buttons */}

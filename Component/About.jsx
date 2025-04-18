@@ -4,7 +4,7 @@ function About() {
       <div className="min-h-screen w-full bg-black px-4 py-10">
         <div className="flex justify-center mb-10">
           <div className="text-center">
-            <h1 className="font-bold text-white text-5xl mb-3">About Me</h1>
+            <h1 className="font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text text-5xl mb-3">About Me</h1>
           </div>
         </div>
 
