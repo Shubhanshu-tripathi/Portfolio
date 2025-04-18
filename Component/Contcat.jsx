@@ -1,56 +1,86 @@
-import email from "../assets/email.png"
-import address from "../assets/address.png"
-import phone from "../assets/phone.png"
-import linkdin from "../assets/linkdin.png"
-import  github from "../assets/github.png"
-
-
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 
 function Contact() {
-    
-    return (<>
-    
-        <div className="h-[100%] w-[100%] " >
-            <div className="h-[100%] w-[100%] bg-black flex items-center justify-evenly" >
-                      
-                <div className="h-[90%] w-[50%] ">
-                        <div className='mt-28 font-serif font-light text-white' >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis omnis voluptates totam iure, obcaecati, suscipit, magnam vero esse soluta aliquid quam molestias quasi possimus modi repudiandae. Incidunt corrupti velit quidem.
-                        Expedita rerum eius soluta impedit repellendus enim culpa deserunt ullam iusto ex! Beatae error debitis veniam natus repudiandae odit nihil veritatis ex laboriosam possimus libero cum dicta, maiores deleniti culpa!
-                        us quo molestias atque, laboriosam similique perspiciatis voluptates?
-                        </div>
-                    <div className="text h-[5%] w-[35%] flex items-center justify-start mt-24  bg-zinc-900" >
-                         <img className="h-8 w-8" src={phone} alt="" />
-                       <h1 className="font-bold  text-white"  >9131694200</h1>
-                    </div>
-                    <div className="text h-[5%] w-[35%] mt-3 flex item-center justify-around  bg-zinc-900" >
-                          <img src={email} alt="" />
-                        <h1 className="font-bold  text-white" >Jigyansu17tripathi@gmail.com</h1></div>
-                    <div className="text h-[5%] w-[35%] mt-3 flex item-center justify-start  bg-zinc-900" >
-                        <img src={address} alt="" />
-                        <h1 className="font-bold  text-white" >Bhopal MadhyaPradesh</h1></div>
-                    <div className="text h-[5%] w-[35%] mt-3 flex item-center justify-start  bg-zinc-900">
-                        <img src={ linkdin} alt="" />
-                          <h1 className="font-bold  text-white" >linkdin:-</h1>
-                        </div>
-                    <div className="text h-[5%] w-[35%] mt-3 flex item-center justify-start  bg-zinc-900">
-                        <img src={github} alt="" />
-                         <h1 className="font-bold  text-white" >Github:-</h1>
-                    </div>
-                  </div>
-            <form className="h-[60%] w-[50%] " action="">
-                  <input className=" h-[10%] w-[85%] rounded-sm mt-2 ml-8 bg-zinc-900 " type="text" placeholder="Enter Your Name" /> <br />
-                  <input className=" h-[10%] w-[85%] rounded-sm mt-2 ml-8 bg-zinc-900 " type="email" placeholder="Enter Your Email" /> <br />
-                  <input className=" h-[20%] w-[85%] rounded-sm mt-2 ml-8 bg-zinc-900 " type="text" placeholder="Enter Your Message" /> <br />
-             <button className=" h-12 w-44 rounded-md font-semibold text-white bg-white  bg-gradient-to-r from-purple-500 to-pink-500  mt-6 ml-8 " >Submit</button>
-                     
-                </form>
-               </div>
-             </div>
-    
-         
-    
-    </>)
+  return (
+    <div className="w-full bg-black py-16 px-6 md:px-20">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="md:w-1/2 space-y-6">
+          <p className="text-white text-sm font-light">
+            Feel free to reach out! I'm open to freelance work, collaborations,
+            and interesting ideas. Let’s build something awesome together!
+          </p>
 
+          <div className="space-y-4 text-white">
+            <div className="flex items-center gap-3 bg-zinc-900 p-3 rounded-md">
+              <FaPhoneAlt className="text-xl text-purple-400" />
+              <span className="font-medium">9131694200</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-zinc-900 p-3 rounded-md">
+              <FaEnvelope className="text-xl text-pink-400" />
+              <span className="font-medium">Jigyansu17tripathi@gmail.com</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-zinc-900 p-3 rounded-md">
+              <FaMapMarkerAlt className="text-xl text-green-400" />
+              <span className="font-medium">Bhopal, Madhya Pradesh</span>
+            </div>
+
+            <div className="flex items-center gap-3 bg-zinc-900 p-3 rounded-md">
+              <FaLinkedin className="text-xl text-blue-500" />
+              <a
+                href="https://www.linkedin.com/in/shubhanshu-tripathi-03a60b27b/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+              >
+                LinkedIn Profile
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3 bg-zinc-900 p-3 rounded-md">
+              <FaGithub className="text-xl text-white" />
+              <a
+                href="https://github.com/Shubhanshu-tripathi"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline"
+              >
+                GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+      
+        <form className="md:w-1/2 w-full space-y-4 mt-8 md:mt-0">
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            className="w-full bg-zinc-900 text-white p-3 rounded-md outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            className="w-full bg-zinc-900 text-white p-3 rounded-md outline-none"
+          />
+          <textarea
+            placeholder="Enter Your Message"
+            className="w-full bg-zinc-900 text-white p-3 h-32 rounded-md resize-none outline-none"
+          ></textarea>
+          <button className="w-44 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-md hover:scale-105 transition duration-300">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default Contact;

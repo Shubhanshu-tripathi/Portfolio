@@ -1,28 +1,37 @@
 function Home() {
-    
-    return (<>
-    
-        <div className="h-[100%]  w-[100%] ">
-             
-            <div className="dp h-56 w-56 mt-[3%] ml-[42%] rounded-full bg-white" >
-                
-            </div>
-            <div className="h-[60%]  w-[100%]  mt-5 bg-black " >
-                <h1 className="font-bold text-5xl  text-white  ml-[29%]"> <samp className="name">I'm Shubhanshu,</samp>frontend <br />developer based in India.</h1>
-                <p className="font-semibold  text-white mt-[3%] ml-[28%] "> I am frontend developer from bhoapl,India with 1 years of experience in multiple <br /> company like tcs,paytm</p>
-                <div className=" h-[20%] w-[40%] mt-[5%] ml-[28%] flex items-center justify-around" >
-                  <button className=" h-[60%] w-[40%]  rounded-3xl font-bold text-white bg-white  bg-gradient-to-r from-purple-500 to-pink-500" > Contact with me </button>
-                    <a className="h-[60%] w-[30%] border-[1px] hover:border-blue-400  border-white bg-black rounded-3xl flex items-center justify-center text-white" href="/CV.pdf" target="_blank" rel="noopener noreferrer">My resume</a>
-                </div>
-            </div>
-             
-        
-        
+    return (
+      <div className=" w-full min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
+        {/* Profile Image */}
+        <div className="dp w-40 h-40 md:w-56 md:h-56 mt-10 rounded-full bg-white shadow-lg"></div>
+  
+        {/* Main Text Section */}
+        <div className="w-full max-w-4xl mt-8 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold leading-snug">
+            <span className="text-pink-500">I'm Shubhanshu,</span> MERN <br /> developer based in India.
+          </h1>
+          <p className="mt-6 text-sm md:text-lg text-gray-300">
+            I am a frontend developer from Bhopal, India with 1 year of experience <br className="hidden md:block" />
+            in companies like TCS and Paytm.
+          </p>
+  
+          {/* Buttons */}
+          <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center items-center">
+            <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-3xl font-semibold shadow-md hover:scale-105 transition">
+              Contact with me
+            </button>
+            <a
+              href="/CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-white rounded-3xl text-white hover:border-blue-400 transition"
+            >
+              My resume
+            </a>
+          </div>
         </div>
-    
-    
-    </>)
-
-
-}
-export default Home
+      </div>
+    );
+  }
+  
+  export default Home;
+  
