@@ -1,5 +1,3 @@
-import logo from "../assets/logo.png";
-
 function About() {
   return (
     <>
@@ -11,7 +9,7 @@ function About() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-evenly gap-8">
-          <div className="rounded-md h-60 w-60 bg-white hidden sm:block"></div>
+          {/* <div className="rounded-md h-60 w-60 bg-white hidden sm:block"></div> */}
 
           <div className="w-full md:w-2/3">
             <p className="font-semibold text-white text-sm sm:text-base mb-6 leading-relaxed">
