@@ -24,7 +24,7 @@ function Navbar() {
           <a href="/about" className="hover:text-pink-400 font-serif">About me</a>
           <a href="/services" className="hover:text-pink-400 font-serif">Service</a>
           <a href="/portfolio" className="hover:text-pink-400 font-serif">Portfolio</a>
-          <a href="/login" className="hover:text-pink-400 font-serif">Contact</a>
+          <a href="/ContactwithUs" className="hover:text-pink-400 font-serif">Contact</a>
         </div>
 
         
