@@ -8,7 +8,6 @@ import About from "./Component/About";
 import Services from "./Component/Services";
 import Work from "./Component/Work";
 import Touch from "./Component/Touch";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./routes/Layout";
 import Contact from "./Component/Contcat";
@@ -27,9 +26,8 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="services" element={<Services />} />
               <Route path="work" element={<Work />} />
-
               <Route path="ContactWithUs" element={<Contact />} />
-              <Route path="ContactwithUs" element={<ContactinNav />} />
+              <Route path="Contact" element={<ContactinNav/>} />
               <Route path="Portfolio" element={<Work />} />
             </Route>
           </Routes>

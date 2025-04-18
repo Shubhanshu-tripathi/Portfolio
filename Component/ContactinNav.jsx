@@ -103,11 +103,11 @@ import {
             <button className="w-44 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-md hover:scale-105 transition duration-300">
               Submit
             </button>
-          </form>
+                </form>
         </div>
       </div>
     );
   }
   
-  export default ContactinNav;
+  export default ContactinNav;  
   
