@@ -42,7 +42,7 @@ const projectData = [
 
 function Work() {
   return (
-    <div className="min-h-screen w-full bg-[#0f0f0f] text-white px-4 py-10">
+    <div className="min-h-screen w-full  text-white px-4 py-10">
       <div className="flex justify-center items-center mb-10">
         <div className="relative bg-black w-full md:w-1/2 h-20 flex items-center justify-center">
           <img className="h-full w-[50px] md:w-[70px]" src={logo} alt="logo" />
