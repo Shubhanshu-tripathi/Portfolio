@@ -1,55 +1,110 @@
 import project1 from "../assets/project_1.svg";
-import project2 from "../assets/project_2.svg";
 import project3 from "../assets/project_3.svg";
 import project4 from "../assets/project_4.svg";
 import project5 from "../assets/project_5.svg";
 import project6 from "../assets/project_6.svg";
 import arrow from "../assets/arrow.png";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
+const projectData = [
+  {
+    img: project1,
+    live: "https://live-link.com",
+    github: "https://github.com/yourrepo1",
+  },
+  {
+    img: project3,
+    live: "https://live-link.com",
+    github: "https://github.com/yourrepo2",
+  },
+  {
+    img: project4,
+    live: "https://live-link.com",
+    github: "https://github.com/yourrepo3",
+  },
+  {
+    img: project5,
+    live: "https://live-link.com",
+    github: "https://github.com/yourrepo4",
+  },
+  {
+    img: project1,
+    live: "https://live-link.com",
+    github: "https://github.com/yourrepo5",
+  },
+  {
+    img: project6,
+    live: "https://live-link.com",
+    github: "https://github.com/yourrepo6",
+  },
+];
 
 function Work() {
-    return (
-        <>
-            <div className="h-[100%] w-[100%]">
-                <div className="h-[14%] w-[100%] flex items-center justify-center">
-                    <div className="h-[100%] w-[30%] flex items-center justify-center relative">
-                        <h1 className="logo text-white font-bold text-5xl absolute">My Work</h1>
-                        <img className="logo h-[90%] w-[30%]" src={logo} alt="Logo" />
-                    </div>
-                </div>
-                <div className="h-[89%] w-[100%] mt-3">
-                    <div className="Work h-[42%] w-[100%] flex items-center justify-around">
-                        <div className="dash h-[90%] bg-white w-[25%]">
-                            <img src={project1} alt="Project 1" />
-                        </div>
-                        <div className="h-[90%] w-[25%] bg-white">
-                             <img src={project3} alt="" />
-                        </div>
-                        <div className="h-[90%] w-[25%] bg-white">
-                        <img src={project4} alt="" />
+  return (
+    <div className="min-h-screen w-full bg-[#0f0f0f] text-white px-4 py-10">
+      <div className="flex justify-center items-center mb-10">
+        <div className="relative bg-black w-full md:w-1/2 h-20 flex items-center justify-center">
+          <img className="h-full w-[50px] md:w-[70px]" src={logo} alt="logo" />
+          <h1 className="absolute text-white font-bold text-3xl md:text-5xl">
+            My Work
+          </h1>
+        </div>
+      </div>
 
-                        </div>
-                    </div>
-                    <div className="Work2 h-[42%] w-[100%] flex items-center justify-around">
-                        <div className="h-[90%] w-[25%] bg-white">
-                             <img src={project5} alt="" />
-                        </div>
-                        <div className="h-[90%] w-[25%] bg-white">
-                             <img src={project1} alt="" />
-                        </div>
-                        <div className="h-[90%] w-[25%] bg-white">
-                            <img src={project6} alt="" />
-                        </div>
-                    </div>
-                    <button className="h-[8%] w-[10%] bg-black ml-[45%]  rounded-2xl font-light text-white flex items-center hover:border-blue-400 border-[1px] border-white mt-4">
-                        <h1 className="ml-12">More</h1>
-                        <img className="h-[30%] w-[20%] mt-1 ml-3" src={arrow} alt="Arrow" />
-                    </button>
-                </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projectData.map((project, index) => (
+          <div
+            key={index}
+            className="relative group overflow-hidden rounded-2xl shadow-xl border border-white/10"
+          >
+            <img
+              src={project.img}
+              alt={`Project ${index + 1}`}
+              className="w-full h-[220px] object-cover rounded-2xl"
+            />
+
+            <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-2xl">
+              <h2 className="text-lg font-semibold mb-4">Technologies Used</h2>
+              <ul className="text-sm text-center mb-6 space-y-1">
+                <li>ReactJS</li>
+                <li>CSS / Tailwind</li>
+                <li>MongoDB</li>
+                <li>ExpressJS</li>
+              </ul>
+              <div className="flex gap-6">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-2xl hover:text-green-400"
+                  title="Live Demo"
+                >
+                  <FaExternalLinkAlt />
+                </a>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-2xl hover:text-blue-400"
+                  title="GitHub"
+                >
+                  <FaGithub />
+                </a>
+              </div>
             </div>
-        </>
-    );
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center mt-12">
+        <button className="bg-black border border-white hover:border-blue-400 text-white px-6 py-2 rounded-2xl flex items-center space-x-3">
+          <span>More</span>
+          <img src={arrow} alt="arrow" className="h-4 w-4" />
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Work;
