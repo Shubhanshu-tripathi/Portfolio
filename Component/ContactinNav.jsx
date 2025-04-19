@@ -58,7 +58,7 @@ function ContactinNav() {
               </a>
             </div>
 
-            {/* Instagram and Facebook links added */}
+           
             <div className="flex items-center gap-3 bg-zinc-900 p-3 rounded-md hover:bg-zinc-700 transition duration-300">
               <FaInstagram className="text-xl text-gradient-to-r from-pink-500 to-purple-500" />
               <a

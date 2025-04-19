@@ -27,8 +27,8 @@ function App() {
               <Route path="services" element={<Services />} />
               <Route path="work" element={<Work />} />
               <Route path="ContactWithUs" element={<Contact />} />
-              <Route path="Contact" element={<ContactinNav/>} />
               <Route path="Portfolio" element={<Work />} />
+              <Route path="contact" element={<ContactinNav />} />
             </Route>
           </Routes>
         </BrowserRouter>
